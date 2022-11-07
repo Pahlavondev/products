@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.products-list {
+  list-style-type: none;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products-item {
+  width: calc(100% / 4 - 30px);
+  background-color: #d9d9d9;
+  padding: 18px 14px 56px 14px;
+  position: relative;
+  margin: 15px;
+}
+
+.products-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 11px;
+}
+
+.products-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.products-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 93px;
+}
+
+.products-span {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.products-name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.icon {
+  position: absolute;
+  bottom: 15px;
+  left: 225px;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #e32df0;
+  border-left-color: transparent;
+  animation-name: loaderAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  transition: all 0.2s linear;
+}
+
+@keyframes loaderAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
